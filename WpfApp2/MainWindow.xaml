@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="600" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbHelyszinnveve" Grid.Row="1" VerticalAlignment="Center"></TextBox>
+        <Label x:Name="lbHelyszinekszama"  Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 45" Foreground="Red">?</Label>
+        <Button x:Name="btnHelyszinekszama" Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Content="Hany szeleromu van itt" Click="btnHelyszinekszama_Click"/>
+
+        <ListBox x:Name="lbxAdatok" Grid.Row="1" Grid.Column="1" Background="LightYellow"></ListBox>
+            
+            
+            <Button x:Name="btnSzeleromuvek" Content="Mennyi szélerőmű adat van?" FontSize="20" Click="btnSzeleromuvek_Click"/>
+        <Button x:Name="btn2010atlag" Content="2010-ben telepített
+erőművek átlagos teljesítménye" FontSize="20" Grid.Column="1" Click="btn2010atlag_Click"/>
+
+        <Button x:Name="btnlegnagyobb" Content="legnagyobb teljesítményű
+erőmű" FontSize="20" Grid.Row="2" Click="btnlegnagyobb_Click"/>
+
+        <Button x:Name="btnjelentes" Content="Jelentés készítése" FontSize="20" Grid.Row="2" Grid.Column="1" Click="btnjelentes_Click"/>
+
+        <DataGrid x:Name="dgAdatok" Grid.Row="3" Grid.ColumnSpan="2" Background="LightSlateGray">
+            
+        </DataGrid>
+    </Grid>
+</Window>
